@@ -1,0 +1,55 @@
+{
+    "name": "Aaa",
+    "surname": "Bbb",
+    "position": "Software developer",
+    "competences" : ["fullstack developer"],
+    "languages":[
+        {"language":"Polish",
+        "level":"native"
+        },
+        {"language":"English",
+        "level":"C1"
+        },
+        {"language":"German",
+        "level":"B2"
+        }
+    ],
+    "education": [{
+        "startYear":"2011",
+        "endYear":"2015",
+        "company":"Wroclaw University of Technology",
+        "compenetce":"Bachelor of IT"
+    },
+    {
+        "startYear":"2016",
+        "endYear":"2017",
+        "company":"Wroclaw University of Technology",
+        "compenetce":"Master of IT"
+    }],
+    "qualification":[{
+        "skill":"programming language",
+        "tools":["Java, Spring, JavaScript, Angular"]
+    },
+    {
+        "skill":"data bases",
+        "tools":["SQL, Oracle, PL/SQL"]
+    },{
+        "skill":"certifications",
+        "tools":["Azure, GPT, Java"]
+    }],
+    "experience":[{
+        "role":"Software developer",
+        "industry":"Financial and Investing",
+        "project":"XYZ",
+        "responsibilities":"Maintenance and development of Wealth Managment, Trading and Brokerage Service for the USA client offering investment solutions. Working as a full stack developer (Java, Angular) in an agile project with SCRUM methodology as a part of an international team."
+    },
+    {
+        "role":"Software developer intership",
+        "industry":"Insurance",
+        "project":"XYZ",
+        "responsibilities":"Maintenance and development of Wealth Managment, Trading and Brokerage Service for the USA client offering investment solutions. Working as a full stack developer (Java, Angular) in an agile project with SCRUM methodology as a part of an international team."
+    }]
+}
+
+
+
