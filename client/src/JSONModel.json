@@ -3,28 +3,32 @@
     "surname": "",
     "position": "",
     "competences" : [],
-    "languages":[
-        {"language":"",
-        "level":""
+    "languages": [
+        {
+            "language": "",
+            "level": ""
         }
     ],
-    "education": [{
-        "startYear":"",
-        "endYear":"",
-        "company":"",
-        "compenetce":""
-    }] ,  
-    "qualification":[{
-        "skill":"",
-        "tools":[""]
-    }],
-    "experience":[{
-        "role":"",
-        "industry":"",
-        "project":"",
-        "responsibilities":""
-    }]
+    "education": [
+        {
+            "startYear": "",
+            "endYear": "",
+            "company": "",
+            "compenetce": ""
+        }
+    ],  
+    "qualification": [
+        {
+            "skill": "",
+            "tools": [""]
+        }
+    ],
+    "experience":[
+        {
+            "role": "",
+            "industry": "",
+            "project": "",
+            "responsibilities": ""
+        }
+    ]
 }
-
-
-
