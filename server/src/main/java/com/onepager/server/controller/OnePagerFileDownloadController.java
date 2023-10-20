@@ -22,10 +22,10 @@ public class OnePagerFileDownloadController{
     private DatabaseFileService fileStorageService;
 
     @GetMapping("/downloadFile/{fileName:.+}")
-    public ResponseEntity <Resource> downloadFile(@PathVariable String fileName, HttpServletRequest request) throws FileNotFoundException {
+    public ResponseEntity <ByteArrayResource> downloadFile(@PathVariable String fileName, HttpServletRequest request) throws FileNotFoundException {
 
         DatabaseFile databaseFile = fileStorageService.getFile(fileName);
 
         return ResponseEntity.ok().contentType(MediaType.parseMediaType(databaseFile.getFileType()))
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + databaseFile.getFileName() + "\"")
-                .body((Resource) new ByteArrayResource(databaseFile.getData()));}}
+                .body( new ByteArrayResource(databaseFile.getData()));}}
