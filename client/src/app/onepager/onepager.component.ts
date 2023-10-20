@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CV, Education } from 'src/models/cv';
 // @ts-ignore
 import jspdf from 'jspdf';
-// @ts-ignore
 import html2canvas from 'html2canvas';
 
 @Component({
@@ -11,8 +10,6 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./onepager.component.scss']
 })
 export class OnepagerComponent {
-  newEducationEntry = new Education();
-
   form: CV = new CV(
     '', // name
     '', // surname
@@ -21,7 +18,7 @@ export class OnepagerComponent {
     [], // languages
     [
       new Education('2020', '2023', 'Cap', 'lorem ipsum'),
-      new Education('2023', '2024', 'Cap 2', 'lorem ipsum 2'),
+      new Education('2023', '2024', 'Cap 2', 'lorem ipsum sdfsdfsdfsdfsdfsdf sdfsd sdfsd sdfs'),
     ], // education
   );
 

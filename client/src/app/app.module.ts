@@ -7,11 +7,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OnepagerComponent } from './onepager/onepager.component';
 
 import { FormsModule } from '@angular/forms';
+import { EducationComponent } from './onepager/education/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OnepagerComponent
+    OnepagerComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,

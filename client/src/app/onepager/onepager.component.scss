@@ -1,6 +1,50 @@
 $header-background-colour: #272936;
 $header-text-color: #12ABDB;
 
+.table-header {
+    background-color: $header-background-colour;
+    color: $header-text-color;
+    text-transform: uppercase;
+    font-size: 24px;
+
+    th {
+        padding: 10px;
+    }
+}
+
+.table-body {
+    td:nth-child(1) {
+        white-space: nowrap;
+    }
+
+    tr:hover {
+        
+        td {
+            background-color: #888888;
+        } 
+    }
+
+    tr:nth-child(2n) {
+        td {
+            background-color: #ECECEC;
+        } 
+
+        &:hover {
+            td {
+                background-color: #888888;
+            }
+        }
+    }
+}
+
+.table-row {
+    z-index: 100;
+    &:hover {
+        filter: brightness(-300);
+    }
+}
+
+
 h1 {
     text-transform: uppercase;
 }
@@ -46,18 +90,6 @@ img {
     }
 }
 
-.list-add-button {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-
-    button {
-        width: 100%;
-        font-size: xx-large;
-        padding: 0px;
-    }
-}
-
 .list-table {
     .header {
         @extend .list-header;
@@ -66,6 +98,24 @@ img {
     .content {
         @extend .list-content;
 
+        .column-1 {
+            margin-right: 10px;
+            height: 100%;
+            float: left;
+        }
+
+        .button-wrapper {
+            background: none;
+            border: none;
+
+            width: 100%;
+            text-align: left;
+        }
+
+        .add-entry-button {
+            width: 100%;
+        }
+
         ul {
             padding: 5px;
         }
@@ -73,17 +123,6 @@ img {
         li:nth-child(2n) {
             background-color: #ECECEC;
         }
-    }
-
-    .column-1 {
-        display: block;
-        width: 30%;
-        float: left;
-    }
-
-    .column-2 {
-        display: block;
-        width: 70%;
     }
 }
 

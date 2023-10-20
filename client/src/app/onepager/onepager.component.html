@@ -1,6 +1,7 @@
 <div>
     <button (click)="downloadOnePager()"><i class="bi bi-download"></i></button>
 </div>
+
 <div class="onepager" id="onepager">
     <h1>curriculum vitae</h1>
     <div class="row align-items-start">
@@ -32,24 +33,7 @@
 
         <div class="col-md-4 column">
           <div class="section">
-            <div class="list-table">
-                <div class="header">
-                    <h4>Education & Competences</h4>
-                </div>
-                <div class="content">
-                    <ul>
-                        <li *ngFor="let education of form.education">
-                            <div class="column-1">{{ education.timeframe }}</div>
-                            <div class="column-2">{{ education.details }}</div>
-                        </li>
-                        <li class="list-add-button">
-                            <button class="btn btn-primary">
-                                <i class="bi bi-plus-lg"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <app-education [educationList]="form.education"/>
           </div>
 
           <div class="section">
