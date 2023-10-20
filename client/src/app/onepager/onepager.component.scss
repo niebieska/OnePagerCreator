@@ -1,10 +1,13 @@
 $header-background-colour: #272936;
 $header-text-color: #12ABDB;
 
-.col {
-    margin: 3px;
+h1 {
+    text-transform: uppercase;
+}
+
+.column {
     height: 800px;
-    padding: 1px;
+    padding: 5px;
     border: 1px dotted lightgray;
 }
 
@@ -16,6 +19,7 @@ img {
 
 .section {
     width: 100%;
+    min-height: 400px;
     margin-bottom: 10px;
 }
 
@@ -42,6 +46,18 @@ img {
     }
 }
 
+.list-add-button {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+
+    button {
+        width: 100%;
+        font-size: xx-large;
+        padding: 0px;
+    }
+}
+
 .list-table {
     .header {
         @extend .list-header;
@@ -57,6 +73,17 @@ img {
         li:nth-child(2n) {
             background-color: #ECECEC;
         }
+    }
+
+    .column-1 {
+        display: block;
+        width: 30%;
+        float: left;
+    }
+
+    .column-2 {
+        display: block;
+        width: 70%;
     }
 }
 
