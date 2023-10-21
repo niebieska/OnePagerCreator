@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { EducationComponent } from './onepager/education/education.component';
 import { EducationModalComponent } from './modals/education-modal/education-modal.component';
 import { QualificationComponent } from './onepager/qualification/qualification.component';
+import { ExperienceComponent } from './onepager/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QualificationComponent } from './onepager/qualification/qualification.c
     OnepagerComponent,
     EducationComponent,
     EducationModalComponent,
-    QualificationComponent
+    QualificationComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

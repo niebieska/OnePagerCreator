@@ -5,7 +5,7 @@
     <div class="content">
         <ul>
             <li *ngFor="let qualification of qualificationList; index as idx; trackBy: trackByFn">
-                <input type="text" [(ngModel)]="qualificationList[idx]" (input)="update()"/>
+                <input class="input-list" type="text" [(ngModel)]="qualificationList[idx]" (input)="update()"/>
             </li>
         </ul>
     </div>

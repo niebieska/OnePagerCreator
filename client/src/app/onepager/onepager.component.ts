@@ -25,6 +25,20 @@ export class OnepagerComponent {
       'Front-end software development',
       'JavaScript, TypeScript'
     ], // qualification
+    [
+      {
+        role: 'role 1',
+        industry: 'industry 1',
+        project: 'project 1',
+        responsibilities: 'lorem ipsum sdfsdfsdfsdfsdfsdf sdfsd sdfsd sdfs'
+      },
+      {
+        role: 'role 2',
+        industry: 'industry 2',
+        project: 'project 2',
+        responsibilities: 'lorem ipsum sdfsdfsdfsdfsdfsdf sdfsd sdfsd sdfs'
+      },
+    ] // experience
   );
 
   downloadOnePager(){
