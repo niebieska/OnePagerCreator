@@ -1,5 +1,7 @@
 $header-background-colour: #272936;
 $header-text-color: #12ABDB;
+$hover-highlite-colour: #888888;
+$list-darker-entry: #ECECEC;
 
 .table-header {
     background-color: $header-background-colour;
@@ -20,18 +22,18 @@ $header-text-color: #12ABDB;
     tr:hover {
         
         td {
-            background-color: #888888;
+            background-color: $hover-highlite-colour
         } 
     }
 
     tr:nth-child(2n) {
         td {
-            background-color: #ECECEC;
+            background-color: $list-darker-entry
         } 
 
         &:hover {
             td {
-                background-color: #888888;
+                background-color: $hover-highlite-colour
             }
         }
     }
@@ -110,6 +112,10 @@ img {
 
             width: 100%;
             text-align: left;
+
+            &:hover {
+                background-color: $hover-highlite-colour;
+            }
         }
 
         .add-entry-button {
@@ -121,7 +127,7 @@ img {
         }
 
         li:nth-child(2n) {
-            background-color: #ECECEC;
+            background-color: $list-darker-entry;
         }
     }
 }

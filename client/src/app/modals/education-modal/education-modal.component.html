@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">New education entry</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+</div>
+<div class="modal-body">
+    <div class="input-group">
+        <input class="form-control" type="number" name="number" min="1950" step="1" placeholder="year start" [(ngModel)]="education.startYear"/>
+        <input class="form-control" type="number" name="number" min="1950" step="1" placeholder="year end" [(ngModel)]="education.endYear"/>
+    </div>
+    <input class="form-control" type="text" name="company" placeholder="company name" [(ngModel)]="education.company"/>
+    <input class="form-control" type="text" name="compenetce" placeholder="competences" [(ngModel)]="education.competence"/>
+</div>
+<div class="modal-footer float-left ">
+    <ng-template #modalCreate [ngIf]="command === 'create-entry'">
+        <button type="button" class="btn btn-success" (click)="create()"><i class="bi bi-plus"></i>Add</button>
+    </ng-template>
+    
+    <ng-template #modalUpdate [ngIf]="command === 'update-entry'">
+        <button type="button" class="btn btn-danger" (click)="remove()"><i class="bi bi-trash-fill"></i>Remove</button>
+        <button type="button" class="btn btn-success" (click)="update()"><i class="bi bi-check-lg"></i>Update</button>
+    </ng-template>
+</div>

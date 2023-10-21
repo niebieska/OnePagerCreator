@@ -1,5 +1,5 @@
 <div class="list-table">
-    <ng-template #educationModal let-modal>
+    <!-- <ng-template #educationModal let-modal>
         <div class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">New education entry</h4>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
@@ -15,7 +15,7 @@
         <div class="modal-footer">
             <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Add</button>
         </div>
-    </ng-template>
+    </ng-template> -->
 
     <div class="list-table">
         <div class="header">
@@ -23,14 +23,14 @@
         </div>
         <div class="content">
             <ul>
-                <li *ngFor="let education of educationList" (click)="open(modalRef)">
-                    <button class="button-wrapper">
+                <li *ngFor="let education of educationList; index as idx">
+                    <button class="button-wrapper" (click)="openModalUpdate(idx, education)">
                         <p class="column-1">{{ education.timeframe }}</p>
                         <p class="column-2">{{ education.details }}</p>
                     </button>
                 </li>
                 <li>
-                    <button class="btn btn-primary add-entry-button" (click)="open(modalRef)">Add</button>
+                    <button class="btn btn-primary add-entry-button" (click)="openModalCreate()"><i class="bi bi-plus-lg"></i></button>
                 </li>
             </ul>
             

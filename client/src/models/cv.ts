@@ -10,15 +10,15 @@ export class Education {
         public startYear:   string = '',
         public endYear:     string = '',
         public company:     string = '',
-        public compenetce:  string = ''
+        public competence:  string = ''
     ) { }
 
-    get timeframe() {
+    public get timeframe() {
         return `${this.startYear} - ${this.endYear}`;
     }
 
-    get details() {
-        return `${this.company} ${this.compenetce}`;
+    public get details() {
+        return `${this.company} ${this.competence}`;
     }
 }
 
