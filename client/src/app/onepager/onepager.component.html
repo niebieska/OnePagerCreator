@@ -33,23 +33,11 @@
 
         <div class="col-md-4 column">
           <div class="section">
-            <app-education [educationList]="form.education"/>
+            <education-section [educationList]="form.education"/>
           </div>
 
           <div class="section">
-            <div class="list-points">
-                <div class="header">
-                    <h4>Qualification</h4>
-                </div>
-                <div class="content">
-                    <ul>
-                        <li>item 1</li>
-                        <li>item 2</li>
-                        <li>item 3</li>
-                        <li>item 4</li>
-                    </ul>
-                </div>
-            </div>
+            <qualification-section [qualificationList]="form.qualification"/>
           </div>
         </div>
 

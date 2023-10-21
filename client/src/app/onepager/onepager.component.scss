@@ -2,6 +2,7 @@ $header-background-colour: #272936;
 $header-text-color: #12ABDB;
 $hover-highlite-colour: #888888;
 $list-darker-entry: #ECECEC;
+$list-bullets-colour: #0070AD;
 
 .table-header {
     background-color: $header-background-colour;
@@ -140,9 +141,32 @@ img {
     .content {
         @extend .list-content;
 
+        li {
+            input {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid $list-bullets-colour;
+            }
+        }
+
+        li:last-child {
+            input {
+                border-bottom: 1px solid lightgray;
+            }
+        }
+
         li::before {
             content: "\25AA";
-            color: $header-text-color;
+            color: $list-bullets-colour;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em; // space
+            margin-left: -1em; // space
+        }
+
+        li:last-child:before {
+            content: "\25AA";
+            color: lightgray;
             font-weight: bold;
             display: inline-block;
             width: 1em; // space

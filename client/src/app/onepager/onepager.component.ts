@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { CV, Education } from 'src/models/cv';
+import { CV, Education, Qualification } from 'src/models/cv';
 // @ts-ignore
 import jspdf from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -20,6 +20,11 @@ export class OnepagerComponent {
       new Education('2020', '2023', 'Cap', 'lorem ipsum'),
       new Education('2023', '2024', 'Cap 2', 'lorem ipsum sdfsdfsdfsdfsdfsdf sdfsd sdfsd sdfs'),
     ], // education
+    [
+      'Back-end software development',
+      'Front-end software development',
+      'JavaScript, TypeScript'
+    ], // qualification
   );
 
   downloadOnePager(){

@@ -9,13 +9,15 @@ import { OnepagerComponent } from './onepager/onepager.component';
 import { FormsModule } from '@angular/forms';
 import { EducationComponent } from './onepager/education/education.component';
 import { EducationModalComponent } from './modals/education-modal/education-modal.component';
+import { QualificationComponent } from './onepager/qualification/qualification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OnepagerComponent,
     EducationComponent,
-    EducationModalComponent
+    EducationModalComponent,
+    QualificationComponent
   ],
   imports: [
     BrowserModule,

@@ -47,7 +47,7 @@ export class CV {
         public competences:     string = '', 
         public languages:       Languages[] = [], 
         public education:       Education[] = [], 
-        public qualification:   Qualification[] = [], 
+        public qualification:   string[] = [], 
         public experience:      Experience[] = []
     ) { }
 }

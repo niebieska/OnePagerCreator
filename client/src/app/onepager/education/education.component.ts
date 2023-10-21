@@ -6,7 +6,7 @@ import { EducationModalComponent } from 'src/app/modals/education-modal/educatio
 import { ModalCommand, ResultCreate, ResultUpdate, ResultDismiss, ResultDelete } from 'src/app/modals/education-modal/types';
 
 @Component({
-  selector: 'app-education',
+  selector: 'education-section',
   templateUrl: './education.component.html',
   styleUrls: ['../onepager.component.scss']
 })
