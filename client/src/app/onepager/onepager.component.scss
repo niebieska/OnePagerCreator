@@ -127,16 +127,15 @@ input[type='file'] {
 
 .column {
     height: 800px;
-    padding: 5px;
-    border: 1px dotted lightgray;
+    padding: 15px;
+    border: 0px dotted lightgray;
 }
 
 .section {
-    width: 100%;
-    min-height: 400px;
+    width: 99%;
+    min-height: 400;
     margin-bottom: 10px;
 }
-
 
 .list-header {
     display: flex;
