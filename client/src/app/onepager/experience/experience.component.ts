@@ -10,6 +10,10 @@ import { Experience } from 'src/models/cv';
 export class ExperienceComponent implements OnInit {
   @Input() experienceList!: Experience[];
 
+  ngOnChanges(change: any) {
+    this.experienceList.push(new Experience());
+  }
+
   ngOnInit(): void {
     this.experienceList.push(new Experience('', '', '', ''));
   }

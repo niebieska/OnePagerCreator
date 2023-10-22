@@ -1,9 +1,11 @@
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { Education } from 'src/models/cv';
 import { EducationModalComponent } from 'src/app/modals/education-modal/education-modal.component';
 import { ModalCommand, ResultCreate, ResultUpdate, ResultDismiss, ResultDelete } from 'src/app/modals/education-modal/types';
+
+
 
 @Component({
   selector: 'education-section',
@@ -18,7 +20,7 @@ export class EducationComponent {
 
   newEducationEntry = new Education();
 
-  constructor(private modalService: NgbModal) {};
+  constructor(private modalService: NgbModal) {}
 
   openModalCreate() {
     this.openModal({type: 'create-entry', index: this.educationList.length, entry: new Education()});

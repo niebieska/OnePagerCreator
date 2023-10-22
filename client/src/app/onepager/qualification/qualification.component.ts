@@ -8,6 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class QualificationComponent implements OnInit {
   @Input() qualificationList!: string[];
 
+  ngOnChanges(change: any) {
+    this.qualificationList.push('');
+  }
+
   ngOnInit(): void {
     this.qualificationList.push('');
   }
