@@ -6,8 +6,12 @@
     <h1>curriculum vitae</h1>
     <div class="row align-items-start">
         <div class="col-md-3 column">
-            <div class="section">
-                <img />
+            <div class="section image-container">
+                <div style="text-align:center">
+                    <div [innerHtml]='msg' *ngIf="msg"></div>
+                    <img class="picture" [src]="url" *ngIf="url">
+                    <input id="files" class="input-image" type="file" title="" (change)="selectFile($event)">
+                </div>
             </div>
 
             <div>

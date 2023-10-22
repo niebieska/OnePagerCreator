@@ -4,6 +4,38 @@ $hover-highlite-colour: #888888;
 $list-darker-entry: #ECECEC;
 $list-bullets-colour: #0070AD;
 
+input[type='file'] {
+    color: rgba(0, 0, 0, 0);
+}
+
+.image-container {
+    position: relative;
+}
+
+.input-image::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.input-image::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    content: '';
+    display: inline-block;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.picture {
+    border-radius: 50%;
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+}
+
 .table-header {
     background-color: $header-background-colour;
     color: $header-text-color;
