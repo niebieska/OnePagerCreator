@@ -44,10 +44,10 @@ export class OnepagerComponent {
 
   downloadOnePager(){
     var data = document.getElementById('onepager')!;
-    html2canvas(data).then((canvas: any) => {
+    html2canvas(data, { scale: 1 }).then((canvas: any) => {
       const imgData = canvas.toDataURL('image/png');
-      const pdf = new jspdf('landscape', 'mm', 'a4');
-      pdf.addImage(imgData, 'PNG', 0, 0, 297, 210); // Adjust dimensions as needed
+      const pdf = new jspdf('landscape', 'px', 'a4');
+      pdf.addImage(imgData, 'JPEG', 20, 20, 570, 360); // Adjust dimensions as needed
       pdf.save('horizontal.pdf');
     });
   }
