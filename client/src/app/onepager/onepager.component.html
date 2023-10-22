@@ -2,79 +2,49 @@
     <button (click)="downloadOnePager()"><i class="bi bi-download"></i></button>
 </div>
 
-<div class='sheet-outer A4'>
-    <section class='sheet  padding-5mm' id="CVpage">
-        <div class="onepager" id="onepager">
-            <h1>curriculum vitae</h1>
-            <div class="row align-items-start">
-                <div class="col-md-3 column">
-                    <div class="section">
-                        <img src="./resources/emploee-face.jpg" />
-                    </div>
-        
-                    <div>
-                        <div class="input-group">
-                            <input class="form-control" type="text" name="name" placeholder="name" [(ngModel)]="form.name" />
-                            <input class="form-control" type="text" name="surename" placeholder="surename" [(ngModel)]="form.surname" />
-                        </div>
-        
-                        <input class="form-control" type="text" name="position" placeholder="position" [(ngModel)]="form.position" />
-                    </div>
-        
-                    <div>
-                        <h4>Key competence/s</h4>
-                        <textarea class="form-control" name="competences" [(ngModel)]="form.competences"></textarea>
-                    </div>
-        
-                    <div>
-                        <h4>Language/s</h4>
-                        <input class="form-control" type="text" name="languages" [(ngModel)]="form.languages"/>
-                    </div>
+<div class="onepager" id="onepager">
+    <h1>curriculum vitae</h1>
+    <div class="row align-items-start">
+        <div class="col-md-3 column">
+            <div class="section image-container">
+                <div style="text-align:center">
+                    <div [innerHtml]='msg' *ngIf="msg"></div>
+                    <img class="picture" [src]="url" *ngIf="url">
+                    <input id="files" class="input-image" type="file" title="" (change)="selectFile($event)">
                 </div>
-        
-        
-                <div class="col-md-4 column">
-                  <div class="section">
-                    <app-education [educationList]="form.education"/>
-                  </div>
-        
-                  <div class="section">
-                    <div class="list-points">
-                        <div class="header">
-                            <h4>Qualification</h4>
-                        </div>
-                        <div class="content">
-                            <ul>
-                                <li>item 1</li>
-                                <li>item 2</li>
-                                <li>item 3</li>
-                                <li>item 4</li>
-                            </ul>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-        
-        
-                <div class="col-md-5 column">
-                    <div class="section">
-                        <div class="list-table">
-                            <div class="header">
-                                <h4>Professional Experience</h4>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>item 1</li>
-                                    <li>item 2</li>
-                                    <li>item 3</li>
-                                    <li>item 4</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-        </div> 
-    </section>
+            </div>
+
+            <input id="input-name" type="text" name="name" placeholder="Name Surname" [(ngModel)]="form.name" />
+            <input id="input-position" type="text" name="position" placeholder="position" [(ngModel)]="form.position" />
+
+            <h4 id="header-competences">Key competence/s</h4>
+            <textarea id="textarea-competences" name="competences" [(ngModel)]="form.competences"
+                placeholder="competences">
+            </textarea>
+
+            <h4 id="header-languages">Language/s</h4>
+            <input id="input-languages" type="text" name="languages" placeholder="English, German..." 
+                [(ngModel)]="form.languages"
+            />
+        </div>
+
+
+        <div class="col-md-4 column">
+          <div class="section">
+            <education-section [educationList]="form.education"/>
+          </div>
+
+          <div class="section">
+            <qualification-section [qualificationList]="form.qualification"/>
+          </div>
+        </div>
+
+
+        <div class="col-md-5 column">
+            <div class="section">
+                <experience-section [experienceList]="form.experience"/>
+            </div>
+        </div>
+      </div>
 </div>
 

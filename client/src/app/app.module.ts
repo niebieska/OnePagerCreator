@@ -8,12 +8,18 @@ import { OnepagerComponent } from './onepager/onepager.component';
 
 import { FormsModule } from '@angular/forms';
 import { EducationComponent } from './onepager/education/education.component';
+import { EducationModalComponent } from './modals/education-modal/education-modal.component';
+import { QualificationComponent } from './onepager/qualification/qualification.component';
+import { ExperienceComponent } from './onepager/experience/experience.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OnepagerComponent,
-    EducationComponent
+    EducationComponent,
+    EducationModalComponent,
+    QualificationComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

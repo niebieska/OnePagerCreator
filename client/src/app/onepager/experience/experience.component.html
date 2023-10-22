@@ -1,0 +1,47 @@
+<div class="list-table">
+    <div class="header">
+        <h4>Professional Experience</h4>
+    </div>
+    <div class="content">
+        <ul>
+            <li *ngFor="let experience of experienceList; index as idx; trackBy: trackByFn">
+                <div class="row">
+                    <div class="col-md-3 experience-label">Role</div>
+                    <div class="col">
+                        <input class="input-list" type="text" name="role" placeholder="role"
+                            [(ngModel)]="experienceList[idx].role" (input)="update()"
+                        />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 experience-label">Industry</div>
+                    <div class="col">
+                        <input class="input-list" type="text" name="industry" placeholder="industry" 
+                            [(ngModel)]="experienceList[idx].industry" (input)="update()"
+                        />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 experience-label">Project</div>
+                    <div class="col">
+                        <input class="input-list" type="text" name="project" placeholder="project" 
+                            [(ngModel)]="experienceList[idx].project" (input)="update()"
+                        />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 experience-label">Responsibilities</div>
+                    <div class="col">
+                        <textarea class="textarea-list" name="responsibilities" placeholder="responsibilities" 
+                            rows="3" wrap="hard" maxlength="250" [(ngModel)]="experienceList[idx].responsibilities" 
+                            (input)="update()"
+                        ></textarea>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

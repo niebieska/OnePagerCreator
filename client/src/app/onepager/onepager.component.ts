@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { CV, Education } from 'src/models/cv';
+import { CV, Education, Qualification } from 'src/models/cv';
 // @ts-ignore
 import jspdf from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -10,9 +10,10 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./onepager.component.scss']
 })
 export class OnepagerComponent {
+  @ViewChild('imageRef') imageRef!: any;
+
   form: CV = new CV(
     '', // name
-    '', // surname
     '', // position
     '', // competences
     [], // languages
@@ -20,6 +21,25 @@ export class OnepagerComponent {
       new Education('2020', '2023', 'Cap', 'lorem ipsum'),
       new Education('2023', '2024', 'Cap 2', 'lorem ipsum sdfsdfsdfsdfsdfsdf sdfsd sdfsd sdfs'),
     ], // education
+    [
+      'Back-end software development',
+      'Front-end software development',
+      'JavaScript, TypeScript'
+    ], // qualification
+    [
+      {
+        role: 'role 1',
+        industry: 'industry 1',
+        project: 'project 1',
+        responsibilities: 'lorem ipsum sdfsdfsdfsdfsdfsdf sdfsd sdfsd sdfs'
+      },
+      {
+        role: 'role 2',
+        industry: 'industry 2',
+        project: 'project 2',
+        responsibilities: 'lorem ipsum sdfsdfsdfsdfsdfsdf sdfsd sdfsd sdfs'
+      },
+    ] // experience
   );
 
   downloadOnePager(){
@@ -31,5 +51,30 @@ export class OnepagerComponent {
       pdf.save('horizontal.pdf');
     });
   }
+
+  url: string = "assets/user.svg";
+	msg = "";
+	
+	selectFile(event: any) {
+		if(!event.target.files[0] || event.target.files[0].length == 0) {
+			// this.msg = 'You must select an image';
+			return;
+		}
+		
+		const mimeType = event.target.files[0].type;
+		
+		if (mimeType.match(/image\/*/) == null) {
+			// this.msg = "Only images are supported";
+			return;
+		}
+		
+		const reader = new FileReader();
+		reader.readAsDataURL(event.target.files[0]);
+		
+		reader.onload = (event) => {
+			this.msg = "";
+			this.url = reader.result! as string; 
+		}
+	}
 
 }

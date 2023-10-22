@@ -1,0 +1,12 @@
+<div class="list-points">
+    <div class="header">
+        <h4>Qualification</h4>
+    </div>
+    <div class="content">
+        <ul>
+            <li *ngFor="let qualification of qualificationList; index as idx; trackBy: trackByFn">
+                <input class="input-list" type="text" [(ngModel)]="qualificationList[idx]" (input)="update()"/>
+            </li>
+        </ul>
+    </div>
+</div>
