@@ -42,12 +42,12 @@ export class OnepagerComponent {
     ] // experience
   );
 
-  downloadOnePager(){
+  downloadOnePager() {
     var data = document.getElementById('onepager')!;
     html2canvas(data, { scale: 1 }).then((canvas: any) => {
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jspdf('landscape', 'px', 'a4');
-      pdf.addImage(imgData, 'JPEG', 20, 20, 570, 360); // Adjust dimensions as needed
+      pdf.addImage(imgData, 'JPEG', 20, 20, 600, 360); // Adjust dimensions as needed
       pdf.save('horizontal.pdf');
     });
   }

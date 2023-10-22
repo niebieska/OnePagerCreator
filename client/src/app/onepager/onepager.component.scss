@@ -133,7 +133,7 @@ input[type='file'] {
 
 .section {
     width: 99%;
-    min-height: 400;
+    min-height: 500;
     margin-bottom: 10px;
 }
 
@@ -180,8 +180,6 @@ input[type='file'] {
         li {
             .input-list {
                 @extend .input;
-
-                border-bottom: 1px dotted $list-bullets-colour;
             }
     
             .textarea-list {
@@ -198,6 +196,10 @@ input[type='file'] {
             
             &::placeholder {
                 color: lightgray;
+            }
+
+            .input {
+                border-bottom: 1px dashed lightgray;
             }
         }
 
@@ -238,12 +240,12 @@ input[type='file'] {
         .input-list {
             @extend .input;
 
-            border-bottom: 1px dotted $list-bullets-colour;
+            // border-bottom: 1px dotted $list-bullets-colour;
         }
 
         li:last-child {
             .input-list {
-                border-bottom: 1px solid lightgray;
+                border-bottom: 1px dashed lightgray;
             }
         }
 
