@@ -23,7 +23,7 @@ export class OnepagerComponent {
   );
 
   downloadOnePager(){
-    var data = document.getElementById('onepager')!;
+    var data = document.getElementById('CVpage')!;
     html2canvas(data).then((canvas: any) => {
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jspdf('landscape', 'mm', 'a4');

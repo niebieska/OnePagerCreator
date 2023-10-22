@@ -51,22 +51,21 @@ h1 {
 
 .column {
     height: 800px;
-    padding: 5px;
-    border: 1px dotted lightgray;
+    padding: 15px;
+    border: 0px dotted lightgray;
 }
 
 img {
-    width: 70%;
-    min-height: 300px;
+    width: 100%;
+    min-height: 250px;
 
 }
 
 .section {
-    width: 100%;
-    min-height: 400px;
+    width: 99%;
+    min-height: 400;
     margin-bottom: 10px;
 }
-
 
 .list-header {
     display: flex;
@@ -142,5 +141,43 @@ img {
             width: 1em; // space
             margin-left: -1em; // space
         }
+    }
+}
+
+
+body { margin: 0 }
+.sheet-outer {
+    margin: 0;
+}
+.sheet {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    page-break-after: always;
+}
+@media screen {
+    body { 
+        background: #e0e0e0 
+    }
+   
+    .sheet {
+        background: white;
+        box-shadow: 0 .5mm 2mm rgba(0,0,0,.3); 
+        margin: 5mm auto;
+    }
+}
+.sheet-outer.A4 .sheet { 
+    width: 297mm; 
+    height: 210mm 
+}
+.sheet.padding-5mm { padding: 5mm }
+@page {
+    size: A4;
+    margin: 0
+}
+@media print {
+    .sheet-outer.A4, .sheet-outer.A5.landscape { 
+        width: 297mm 
     }
 }
