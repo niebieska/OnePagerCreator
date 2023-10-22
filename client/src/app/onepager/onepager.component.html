@@ -1,57 +1,95 @@
-<div>
-    <button (click)="downloadOnePager()"><i class="bi bi-download"></i></button>
-</div>
+<div class="onepager" id="onepager">
+    <div>
+        <button (click)="downloadOnePager()"><i class="bi bi-download"></i></button>
+    </div>
 
-<div class='sheet-outer A4'>
-    <section class='sheet  padding-5mm' id="CVpage">
-        <div class="onepager" id="onepager">
-            <h1>curriculum vitae</h1>
-            <div class="row align-items-start">
-                <div class="col-md-3 column">
-                    <div class="section image-container">
-                        <div style="text-align:center">
-                            <div [innerHtml]='msg' *ngIf="msg"></div>
-                            <img class="picture" [src]="url" *ngIf="url">
-                            <input id="files" class="input-image" type="file" title="" (change)="selectFile($event)">
-                        </div>
-                    </div>
-        
-                    <input id="input-name" type="text" name="name" placeholder="Name Surname" [(ngModel)]="form.name" />
-                    <input id="input-position" type="text" name="position" placeholder="position" [(ngModel)]="form.position" />
-        
-                    <h4 id="header-competences">Key competence/s</h4>
-                    <textarea id="textarea-competences" name="competences" [(ngModel)]="form.competences"
-                        placeholder="competences">
-                    </textarea>
-        
-                    <h4 id="header-languages">Language/s</h4>
-                    <input id="input-languages" type="text" name="languages" placeholder="English, German..." 
-                        [(ngModel)]="form.languages"
-                    />
+    <div class="row">
+        <h1 class="col">curriculum vitae</h1>
+        <div class="col" style="text-align: right;">
+            <img id="logo" src="assets/logo.png" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="section image-container">
+                <div style="text-align:center">
+                    <div [innerHtml]='msg' *ngIf="msg"></div>
+                    <img id="picture" [src]="url" *ngIf="url">
+                    <input id="files" class="input-image" type="file" title="" (change)="selectFile($event)">
                 </div>
-        
-        
-                <div class="col-md-4 column">
-                  <div class="section">
-                    <education-section [educationList]="form.education"/>
-                  </div>
-        
-                  <div class="section">
-                    <qualification-section [qualificationList]="form.qualification"/>
-                  </div>
+            </div>
+
+            <input id="input-name" type="text" name="name" placeholder="Name Surname" [(ngModel)]="form.name" />
+            <input id="input-position" type="text" name="position" placeholder="position" [(ngModel)]="form.position" />
+
+            <h4 id="header-competences">Key competence/s</h4>
+            <textarea id="textarea-competences" name="competences" [(ngModel)]="form.competences"
+                placeholder="competences">
+            </textarea>
+
+            <h4 id="header-languages">Language/s</h4>
+            <input id="input-languages" type="text" name="languages" placeholder="English, German..." 
+                [(ngModel)]="form.languages"
+            />
+        </div>
+        <div class="col-4">
+            <div class="section">
+                <education-section [educationList]="form.education"/>
+            </div>
+    
+              <div class="section">
+                <qualification-section [qualificationList]="form.qualification"/>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="section">
+                <experience-section [experienceList]="form.experience"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col-md-3 column">
+            <div class="section image-container">
+                <div style="text-align:center">
+                    <div [innerHtml]='msg' *ngIf="msg"></div>
+                    <img class="picture" [src]="url" *ngIf="url">
+                    <input id="files" class="input-image" type="file" title="" (change)="selectFile($event)">
                 </div>
-        
-        
-                <div class="col-md-5 column">
-                    <div class="section">
-                        <experience-section [experienceList]="form.experience"/>
-                    </div>
-                </div>
-              </div>
+            </div>
+
+            <input id="input-name" type="text" name="name" placeholder="Name Surname" [(ngModel)]="form.name" />
+            <input id="input-position" type="text" name="position" placeholder="position" [(ngModel)]="form.position" />
+
+            <h4 id="header-competences">Key competence/s</h4>
+            <textarea id="textarea-competences" name="competences" [(ngModel)]="form.competences"
+                placeholder="competences">
+            </textarea>
+
+            <h4 id="header-languages">Language/s</h4>
+            <input id="input-languages" type="text" name="languages" placeholder="English, German..." 
+                [(ngModel)]="form.languages"
+            />
         </div>
 
 
-    </section>
+        <div class="col-md-4 column">
+          <div class="section">
+            <education-section [educationList]="form.education"/>
+          </div>
+
+          <div class="section">
+            <qualification-section [qualificationList]="form.qualification"/>
+          </div>
+        </div>
+
+
+        <div class="col-md-5 column">
+            <div class="section">
+                <experience-section [experienceList]="form.experience"/>
+            </div>
+        </div>
+    </div> -->
 </div>
 
 
