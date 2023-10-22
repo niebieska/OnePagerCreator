@@ -4,6 +4,60 @@ $hover-highlite-colour: #888888;
 $list-darker-entry: #ECECEC;
 $list-bullets-colour: #0070AD;
 
+#header-competences {
+    margin-top: 20px;
+    color: $header-text-color;
+}
+
+#header-languages {
+    margin-top: 20px;
+    color: $header-text-color;
+}
+
+#input-name {
+    width: 100%;
+    border: none;
+    font-size: 2rem;
+    color: $header-text-color;
+
+    &::placeholder {
+        color: lighten($header-text-color, 40%);
+    }
+}
+
+#input-position {
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+
+    &::placeholder {
+        color: lighten(black, 40%);
+    }
+}
+
+#textarea-competences {
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+
+    &::placeholder {
+        color: lighten(black, 40%);
+    }
+}
+
+#input-languages {
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+
+    &::placeholder {
+        color: lighten(black, 40%);
+    }
+}
+
 input[type='file'] {
     color: rgba(0, 0, 0, 0);
 }
@@ -25,6 +79,7 @@ input[type='file'] {
     content: '';
     display: inline-block;
     border-radius: 3px;
+    user-select: none;
     -webkit-user-select: none;
     cursor: pointer;
 }
@@ -125,6 +180,11 @@ img {
     }
 }
 
+.experience-label {
+    padding-left: 15px;
+}
+
+
 .list-table {
     .header {
         @extend .list-header;
@@ -163,8 +223,6 @@ img {
                 color: lightgray;
             }
         }
-
-
 
         .button-wrapper {
             background: none;

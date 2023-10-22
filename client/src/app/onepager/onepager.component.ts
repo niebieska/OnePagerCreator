@@ -14,7 +14,6 @@ export class OnepagerComponent {
 
   form: CV = new CV(
     '', // name
-    '', // surname
     '', // position
     '', // competences
     [], // languages
@@ -56,8 +55,7 @@ export class OnepagerComponent {
   url: string = "assets/user.svg";
 	msg = "";
 	
-	//selectFile(event) { //Angular 8
-	selectFile(event: any) { //Angular 11, for stricter type
+	selectFile(event: any) {
 		if(!event.target.files[0] || event.target.files[0].length == 0) {
 			// this.msg = 'You must select an image';
 			return;
@@ -73,9 +71,9 @@ export class OnepagerComponent {
 		const reader = new FileReader();
 		reader.readAsDataURL(event.target.files[0]);
 		
-		reader.onload = (_event) => {
+		reader.onload = (event) => {
 			this.msg = "";
-			this.url = reader.result as string; 
+			this.url = reader.result! as string; 
 		}
 	}
 

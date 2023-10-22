@@ -42,7 +42,6 @@ export class Experience {
 export class CV {
     constructor(
         public name:            string = '', 
-        public surname:         string = '', 
         public position:        string = '', 
         public competences:     string = '', 
         public languages:       Languages[] = [], 

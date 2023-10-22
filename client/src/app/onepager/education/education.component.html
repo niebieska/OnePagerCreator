@@ -1,22 +1,4 @@
 <div class="list-table">
-    <!-- <ng-template #educationModal let-modal>
-        <div class="modal-header">
-            <h4 class="modal-title" id="modal-basic-title">New education entry</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-        </div>
-        <div class="modal-body">
-            <div class="input-group">
-                <input class="form-control" type="number" name="number" min="1950" step="1" placeholder="year start"/>
-                <input class="form-control" type="number" name="number" min="1950" step="1" placeholder="year end"/>
-            </div>
-            <input class="form-control" type="text" name="company" placeholder="company"/>
-            <input class="form-control" type="text" name="compenetce" placeholder="compenetce"/>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Add</button>
-        </div>
-    </ng-template> -->
-
     <div class="list-table">
         <div class="header">
             <h4>Education & Competences</h4>
@@ -30,7 +12,9 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn btn-primary add-entry-button" (click)="openModalCreate()"><i class="bi bi-plus-lg"></i></button>
+                    <button class="btn btn-primary add-entry-button" (click)="openModalCreate()">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
                 </li>
             </ul>
             
